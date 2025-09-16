@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="SmokeSuite">
+    <listeners>
+        <listener class-name="com.RetryAnalyzer.test.TestListener"/>
+        <listener class-name="com.RetryAnalyzer.test.RetryListener"/>
+    </listeners>
+    <test name="Smoke">
+        <groups>
+                <run>
+                    <include name="smoke"/>
+                </run>
+        </groups>
+        <classes>
+            <class name="com.RetryAnalyzer.test.GroupingTest"/>
+        </classes>
+    </test>
+</suite>
