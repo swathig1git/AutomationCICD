@@ -1,5 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Suite1">
+    <parameter name="browser" value="chrome"/>
     <listeners>
         <listener class-name="com.RetryAnalyzer.test.TestListener"/>
         <listener class-name="com.RetryAnalyzer.test.RetryListener"/>
@@ -19,6 +20,9 @@
     <test name="ClassFlaky">
         <classes>
             <class name="com.RetryAnalyzer.test.RetryClassLevel"/>
+            <class name="com.RetryAnalyzer.test.GroupingTest"/>
+            <class name="com.RetryAnalyzer.test.ParameterizedTest"/>
+            <class name="com.RetryAnalyzer.test.RetrySampleTest"/>
         </classes>
     </test>
 </suite>
