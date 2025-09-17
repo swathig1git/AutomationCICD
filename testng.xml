@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite1">
+    <listeners>
+        <listener class-name="com.RetryAnalyzer.test.TestListener"/>
+        <listener class-name="com.RetryAnalyzer.test.RetryListener"/>
+    </listeners>
+<!--    <test name="Test1">-->
+<!--        <classes>-->
+<!--            <class name="com.RetryAnalyzer.test.RetrySampleTest"/>-->
+<!--            <class name="com.RetryAnalyzer.test.SampleListenerTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="ParameterTest">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="com.RetryAnalyzer.test.ParameterizedTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="ClassFlaky">
+        <classes>
+            <class name="com.RetryAnalyzer.test.RetryClassLevel"/>
+        </classes>
+    </test>
+</suite>
